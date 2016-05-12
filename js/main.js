@@ -7,12 +7,12 @@
 
 // Refer to the `index.html` file for the validation rules that must be enforced.
 $(document).ready(function() {
-    $('.form-group').formValidation({
+    $('#order-form').validate({
         framework: 'bootstrap',
         //adjusting feedback icons use glyphicon checkmark and cross mark
         icon: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
+            valid: 'glyphicons-ok-sign',
+            invalid: 'glyphicon glyphicons-exclamation-sign',
             validating: 'glyphicon glyphicon-refresh',
         },
 
