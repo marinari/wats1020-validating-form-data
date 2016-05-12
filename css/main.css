@@ -1,22 +1,45 @@
 
 
 /* ==========================================================================
-   Author's custom styles
+   Arianna Marin's custom styles
    ========================================================================== */
+   /* Color of invalid field */
+.form-group .has-error .control-label,
+.has-error .help-block,
+.has-error .form-control-feedback {
+    color: #2CA61C; /* bright vivid green */
+}
 
+/* Color of valid field */
+.form-group .has-success .control-label,
+.has-success .help-block,
+.has-success .form-control-feedback {
+    color: #EB1400; /*strong red*/
+}
 
+/* example phone number validation styles from codepen
+input[type="tel"] {
+  border: 1px solid #ddd;
+  padding: 4px 8px;
+}
+input[type="tel"]:focus {
+  border: 1px solid #000;
+}
 
+input[type="submit"] {
+  font-weight: bold;
+  padding: 4px 8px;
+  border:1px solid #000;
+  background: #3b5998;
+  color:#fff;
+}
 
+form {
+  width: 50%;
+  margin: 0 auto;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.p {
+  padding-top: 30px;
+}
+*/
