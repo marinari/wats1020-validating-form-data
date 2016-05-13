@@ -3,18 +3,27 @@
 /* ==========================================================================
    Arianna Marin's custom styles
    ========================================================================== */
-   /* Color of invalid field */
-.form-group .has-error .control-label,
-.has-error .help-block,
-.has-error .form-control-feedback {
-    color: #2CA61C; /* bright vivid green */
+@font-face {
+    font-family: iconfont;
+    src: url('fonts/glyphicons-halflings-regular.woff');
 }
 
-/* Color of valid field */
-.form-group .has-success .control-label,
-.has-success .help-block,
-.has-success .form-control-feedback {
-    color: #EB1400; /*strong red*/
+input[aria-invalid="true"] {
+  border: solid 1px #E82C0C;
+}
+input [aria-invalid="false"] {
+  font-family: iconfont;
+  content: '\e125';
+  z-index: 10;
+  margin-left: -40px;
+
+}
+
+.error {
+  color: #E82C0C;
+}
+.valid {
+  color: #2CA61C;
 }
 
 /* example phone number validation styles from codepen

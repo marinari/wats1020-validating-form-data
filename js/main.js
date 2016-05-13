@@ -7,14 +7,31 @@
 
 // Refer to the `index.html` file for the validation rules that must be enforced.
 $(document).ready(function() {
-    $('#order-form').validate({
-        framework: 'bootstrap',
-        //adjusting feedback icons use glyphicon checkmark and cross mark
-        icon: {
-            valid: 'glyphicons-ok-sign',
-            invalid: 'glyphicon glyphicons-exclamation-sign',
-            validating: 'glyphicon glyphicon-refresh',
-        },
+  $.validator.methods.email = function( value, element ) {
+  return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
+}
+  $.validator.addMethod('phone', function( value, element ){
+    return this.optional( element ) || /^\d{3}-\d{3}-\d{4}$/.test ( value );
+  }, "Please enter a valid phone number.");
 
+    $('#order-form').validate({
+
+      rules: {
+            "your-name": {
+                required: true,
+                maxlength: 128
+            },
+            "your-zip": {
+                required: true,
+                maxlength: 5,
+                digits: true
+            },
+            "your-email":{
+              email:true
+            },
+            "phonenum":{
+            phone: true
+          }
+      }
     });
 });
