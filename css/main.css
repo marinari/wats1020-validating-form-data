@@ -4,10 +4,20 @@
    Arianna Marin's custom styles
    ========================================================================== */
 @font-face {
-    font-family: iconfont;
+    font-family: 'iconfont';
     src: url('fonts/glyphicons-halflings-regular.woff');
 }
-
+body {
+  color: #2E6DA4;
+}
+.navbar-inverse .navbar-brand {
+    color: #F5F5F5;
+}
+/* input field styles aka form styles */
+.form-control {
+  border-radius: 0px;
+  width: 75%;
+}
 input[aria-invalid="true"] {
   border: solid 1px #E82C0C;
 }
@@ -18,12 +28,32 @@ input [aria-invalid="false"] {
   margin-left: -40px;
 
 }
-
+#cvv {
+  width: 150px;
+}
 .error {
   color: #E82C0C;
 }
 .valid {
   color: #2CA61C;
+}
+.btn-success {
+  background-image: linear-gradient(to bottom,#2196F3 0,#00BCD4 100%);
+  background-color: #00BCD4;
+  color: #F5F5F5;
+  border-color: #2196F3;
+}
+.btn-success:hover {
+  background-color: #00BCD4;
+  background-position: 0 -15px;
+  border-color: #00BCD4;
+}
+footer p {
+  color: #FF9800;
+}
+a:hover {
+  color: #FFC107;
+  text-decoration: none;
 }
 
 /* example phone number validation styles from codepen

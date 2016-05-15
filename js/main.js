@@ -15,7 +15,7 @@ $(document).ready(function() {
   $.validator.addMethod('phone', function( value, element ){
     return this.optional( element ) || /^\d{3}-\d{3}-\d{4}$/.test ( value );
   }, "Please enter a valid phone number.");
-  
+
   //function to validate known state abbreviations
   $.validator.addMethod('stateprop', function(value) {
     var states = [
@@ -36,6 +36,9 @@ $(document).ready(function() {
                 required: true,
                 maxlength: 128
             },
+            "your-address": {
+              required: true
+            },
             "your-state":{
               required: true,
               maxlength: 2,
@@ -51,20 +54,21 @@ $(document).ready(function() {
             },
             "phonenum":{
             phone: true
-          }
+          },
           "your-website": {
             url: true
-          }
+          },
           "card-holder-name": {
             required: true,
             maxlength: 128
-          }
+          },
           "card-number": {
             required: true,
             creditcard: true
-          }
+          },
           "cvv": {
             required: true,
+            minlength: 3,
             maxlength: 3,
             digits: true
           }
