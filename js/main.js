@@ -7,6 +7,10 @@
 
 // Refer to the `index.html` file for the validation rules that must be enforced.
 $(document).ready(function() {
+  //function to only except letters
+  $.validator.addMethod('alpha', function( value, element ) {
+   return this.optional( element ) || /[^0-9]/.test( value );
+ }, "No numbers allowed for this field.");
   //function for a strict limit on email address
   $.validator.methods.email = function( value, element ) {
   return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
@@ -35,7 +39,7 @@ $(document).ready(function() {
             "your-name": {
                 required: true,
                 maxlength: 128,
-                nonum: true
+                alpha: true
 
             },
             "your-address": {
@@ -63,7 +67,7 @@ $(document).ready(function() {
           "card-holder-name": {
             required: true,
             maxlength: 128,
-            nonum: true
+            alpha: true
           },
           "card-number": {
             required: true,
