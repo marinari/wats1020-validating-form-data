@@ -34,7 +34,9 @@ $(document).ready(function() {
       rules: {
             "your-name": {
                 required: true,
-                maxlength: 128
+                maxlength: 128,
+                nonum: true
+
             },
             "your-address": {
               required: true
@@ -60,7 +62,8 @@ $(document).ready(function() {
           },
           "card-holder-name": {
             required: true,
-            maxlength: 128
+            maxlength: 128,
+            nonum: true
           },
           "card-number": {
             required: true,
